@@ -1,0 +1,33 @@
+p, h1, h2 {
+  color: white;
+  margin: 0;
+}
+
+input:focus {
+  outline: none;
+}
+
+hr {
+  background-color: #393c49;
+  height: 3px;
+  border-radius: 2px;
+  border: none;
+}
+
+header {
+  display: flex;
+  width: 100%;
+  min-height: var(--header-height);
+  justify-content: space-between;
+  align-content: space-between;
+}
+
+ul {
+  padding-left: 0;
+}
+
+p {
+  font-family: var(--main-font);
+  font-size: 16px;
+  font-weight: 400;
+}

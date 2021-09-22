@@ -1,0 +1,10 @@
+html{
+    --sidebar-nav-height: 60%;
+    --page-background-color: #252836;
+    --sidebar-background-color: #1F1D2B;
+    --page-padding: 20px;
+    --header-padding: 20px;
+    --header-margin-bottom: 20px;
+    --header-min-height: 100px;
+    --header-height: calc( var(--header-min-height) - var(--header-padding)*2 );
+}

@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@600&display=swap");
+
+.menu_page header {
+	margin-bottom: var(--header-margin-bottom);
+
+	.header-data-info {
+		flex-basis: var(--menu-page-header-left-flex-basis);
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: space-between;
+		align-items: flex-start;
+		height: 60px;
+	}
+
+	.header-input-search {
+		flex-basis: var(--menu-page-header-right-flex-basis);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	input:focus {
+		outline: none;
+	}
+
+	.header-input-search input {
+		border: 1px solid #393c49;
+		border-radius: 10px;
+		width: 220px;
+		height: 48px;
+		padding-left: 40px;
+		color: white;
+		font-family: "Lexend", sans-serif;
+		background: #2d303e url(../../assets/img/search.png) no-repeat 10px center;
+		background-size: 20px;
+	}
+}

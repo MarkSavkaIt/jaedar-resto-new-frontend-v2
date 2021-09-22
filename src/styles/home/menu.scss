@@ -1,0 +1,123 @@
+/*......Menu_List...... */
+
+.menu {
+   display: flex;
+   flex-flow: column nowrap;
+   font-family: var(--main-font);
+   font-weight: 600 ;
+   
+   .menu_list {
+      width: auto;
+      height: var(--menu-list-height);
+      display: flex;
+      flex-direction: column;
+      overflow: auto
+   }
+
+   ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      margin: 10px 0
+   }
+
+   li {
+      color: white;
+      list-style-type: none;
+      padding-right: 25px;
+      cursor: pointer;
+      -webkit-tap-highlight-color: #00000000;
+      white-space: nowrap
+   }
+
+   .status_line_parent {
+      background-color: gray;
+      border-radius: 5px
+   }
+
+   .status_line_child {
+      height: 3px;
+      background-color: #EA7C69;
+      border-radius: 5px;
+      transition: 1500ms;
+      transition-timing-function: ease
+   }
+
+   .status_1 {
+      width: 75px
+   }
+
+   .status_2 {
+      width: 100px;
+      transform: translateX(90px)
+   }
+
+   .status_3 {
+      width: 40px;
+      transform: translateX(205px)
+   }
+
+   .status_4 {
+      width: 40px;
+      transform: translateX(260px)
+   }
+
+   .status_5 {
+      width: 70px;
+      transform: translateX(320px)
+   }
+
+   .status_6 {
+      width: 60px;
+      transform: translateX(410px)
+   }
+
+   /*.....menu_grid.....*/
+
+   .menu_grid .menu_top {
+      height: var(--menu-top-height);
+      display: flex;
+      justify-content: space-between;
+      flex-flow: row nowrap;
+      align-items: center
+   }
+
+   button {
+      height: 100%;
+      gap: 10px;
+      display: flex;
+      align-items: center;
+      padding: 14px;
+      color: white;
+      background: #1F1D2B;
+      border: 1px solid #393C49;
+      box-sizing: border-box;
+      border-radius: 8px
+   }
+
+   button:focus {
+      outline: none
+   }
+
+   .menu_grid {
+      height: calc(100vh - (var(--header-height) + var(--page-padding) + var(--menu-list-height) + var(--header-margin-bottom)));
+      overflow: scroll
+   }
+
+   &::-webkit-scrollbar {
+      display: none
+   }
+
+   .menu_grid_items {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      opacity: 0
+   }
+
+   &::-webkit-scrollbar {
+      display: none
+   }
+
+}

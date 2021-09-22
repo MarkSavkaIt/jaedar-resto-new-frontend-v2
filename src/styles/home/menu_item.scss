@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
+
+.menu{
+    .item{
+        --img-height: 130px;
+        --img-width: 130px;
+        --item-height: 260px;
+        --item-margin-top: calc( var(--img-height) / 2 + 10px );
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: flex-start;
+        padding: 5px;
+        margin: var(--item-margin-top) 10px calc( var(--item-margin-top) / 2);
+        background: #1F1D2B;
+        border-radius: 15px;
+        width: 190px;
+        height: var(--item-height);
+        cursor: pointer;
+    }
+
+    .description{
+        height: calc( var(--item-height) - (var(--img-height) / 2) - 10px );
+        transform: translateY(calc( var(--img-height) / 2 * -1 ));
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-evenly;
+        flex-basis: 100%;
+    }
+
+    img{
+        width: var(--img-width);
+        height: var(--img-height);
+        transform: translateY(calc( var(--img-height) / 2 * -1));
+    }
+
+    p{
+        text-align: center;
+        font-family: 'Aclonica', sans-serif;
+        font-size: 20px;
+    }
+
+    &:last-child{
+        color: gray;
+    }
+}

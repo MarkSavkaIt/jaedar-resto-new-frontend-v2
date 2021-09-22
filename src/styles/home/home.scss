@@ -1,0 +1,32 @@
+@import './header.scss';
+@import './menu_item.scss';
+@import './menu.scss';
+
+@import './order.scss';
+@import './order_items.scss';
+@import './radio_buttons.scss';
+
+.home {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap ;
+
+    .menu_page {
+        --menu-page-header-left-flex-basis: 70%;
+        --menu-page-header-right-flex-basis: calc(100% - var(--menu-page-header-left-flex-basis));
+        --menu-list-height: 50px;
+        --menu-top-height: 50px;
+
+        flex-basis: 70%;
+        padding: var(--page-padding);
+        padding-bottom: 0;
+        min-height: 700px;
+        height: 100vh
+    }
+
+    .order{ 
+        flex-basis: 30%;
+        background-color: #1F1D2B;
+        min-width: 30%;
+    }
+}

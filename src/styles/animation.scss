@@ -1,0 +1,9 @@
+.fade_out {
+	opacity: 0;
+}
+
+.fade_in {
+	transition: 2s;
+	opacity: 1 !important;
+	animation-timing-function: cubic-bezier(0.04, 0.235, 0, 1.01);
+}
