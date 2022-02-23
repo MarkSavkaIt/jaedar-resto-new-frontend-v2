@@ -1,13 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { DeleteSVG } from "../../../../assets/svg";
 
-const OrderItems = ({ img, name, price }) => {
-	const [local, setLocal] = useState([]);
+const OrderItems = ({ img, name, price, deleteItem, id }) => {
 	const [inputCount, setInputCount] = useState(1);
-
-	useEffect(() => {
-		setLocal(JSON.parse(localStorage.getItem("orderList")));
-	}, []);
 
 	const inputCountValidator = (count) => {
 		count >= 1 && count <= 40
@@ -18,6 +13,7 @@ const OrderItems = ({ img, name, price }) => {
 					? setInputCount(1)
 					: setInputCount(count);
 	};
+
 	return (
 		<div className="items_grid">
 			<img src={img} alt="logo" className="logo" />
@@ -38,8 +34,8 @@ const OrderItems = ({ img, name, price }) => {
 				type="text"
 				placeholder="U can add a comment"
 			/>
-			<div className="delete">
-				<DeleteSVG onClick={() => {}} />
+			<div className="delete" onClick={() => deleteItem(id)} >
+				<DeleteSVG />
 			</div>
 		</div>
 	);

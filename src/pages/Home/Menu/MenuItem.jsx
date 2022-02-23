@@ -1,6 +1,6 @@
 import React from "react";
 
-const MenuItem = ({ name, price, count, img = "https://www.flaticon.com/svg/vstatic/svg/868/868753.svg?token=exp=1619440906~hmac=d867d45481785f41c9ee85595e6a00b7", id }) => {
+const MenuItem = ({ addItemToStorage, name, price, count, img = "https://www.flaticon.com/svg/vstatic/svg/868/868753.svg?token=exp=1619440906~hmac=d867d45481785f41c9ee85595e6a00b7", id }) => {
 
 	const writeToLocalStorage = () => {
 		const localStorageItems = JSON.parse(localStorage.getItem("orderList"));
@@ -20,6 +20,7 @@ const MenuItem = ({ name, price, count, img = "https://www.flaticon.com/svg/vsta
 			localStorage.setItem("orderList", JSON.stringify([]));
 			writeToLocalStorage();
 		}
+		addItemToStorage()
 	};
 
 	return (

@@ -2,25 +2,19 @@ import React, { useEffect, useState } from "react";
 import { ArrowSVG } from "../../../assets/svg";
 import MenuItem from "./MenuItem";
 import fetchMenuItems from "../../../services/fetchMenuItems";
-// import { useDispatch, useSelector } from "react-redux";
-// import getItemsRequest from "../../../service/getAllMenuItems";
-// import { loadProducts } from "../../../redux/reducer";
 
-const MenuGrid = (props) => {
+const MenuGrid = ({addItemToStorage, fade, category, changeFade }) => {
 	const [items, setItems] = useState(undefined);
 	const style = "menu_grid_items";
-	// const dispatch = useDispatch();
 
 	useEffect(() => {
 		async function getItems() {
 			setItems(await fetchMenuItems());
-			props.changeFade("fade_in");
+			changeFade("fade_in");
 		}
 		getItems();
 
-		// dispatch(loadProducts(getItemsRequest()))
-		// props.changeFade('fade_in');
-	}, [props, props.fade]);
+	}, [changeFade, fade]);
 
 	return (
 		<div className="menu_grid">
@@ -31,11 +25,11 @@ const MenuGrid = (props) => {
 					Dine in
 				</button>
 			</div>
-			<div className={style + " " + props.fade}>
+			<div className={style + " " + fade}>
 				{items &&
 					items.map((item) => {
-						return item.category.map((category) => {
-							if (category === props.category) {
+						return item.category.map((categoryFilter) => {
+							if (categoryFilter === category) {
 								return (
 									<MenuItem
 										id={item.id}
@@ -43,6 +37,7 @@ const MenuGrid = (props) => {
 										price={item.price}
 										count={item.count}
 										img={item.img}
+										addItemToStorage={addItemToStorage}
 									/>
 								);
 							}

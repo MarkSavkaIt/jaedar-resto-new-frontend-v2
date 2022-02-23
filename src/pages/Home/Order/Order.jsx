@@ -1,11 +1,12 @@
-import React, { useEffect, useState } from 'react'
-import { DeleteSVG } from '../../../assets/svg';
+import React, {useEffect, useState} from 'react'
 import OrderItems from './OrderItems/OrderItems';
 import RadioButtons from './RadioButtons/radioButtons'
 
-const Order = () => {
+const Order = ({localStorageItems, deleteItem}) => {
 
-   const localStorageItems = JSON.parse(localStorage.getItem("orderList")) || [];
+   useEffect(() => {}, [
+
+   ], [localStorageItems])
 
    return (
       <div className="order">
@@ -14,7 +15,7 @@ const Order = () => {
          {/* Order items */}
          {
             localStorageItems && localStorageItems.map(item => {
-               return <OrderItems img={item.img} name={item.name} price={item.price} key={item.id} id={item.id} />
+               return <OrderItems deleteItem={deleteItem} img={item.img} name={item.name} price={item.price} key={item.id} id={item.id} />
             })
          }
       </div>
