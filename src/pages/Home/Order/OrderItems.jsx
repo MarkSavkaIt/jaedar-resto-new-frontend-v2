@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { DeleteSVG } from "../../../../assets/svg";
+import { DeleteSVG } from "../../../assets/svg";
 
 const OrderItems = ({ img, name, price, deleteItem, id }) => {
 	const [inputCount, setInputCount] = useState(1);

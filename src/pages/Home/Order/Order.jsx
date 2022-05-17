@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react'
-import OrderItems from './OrderItems/OrderItems';
-import RadioButtons from './RadioButtons/radioButtons'
+import OrderItems from './OrderItems';
+import RadioButtons from './radioButtons'
 
 const Order = ({localStorageItems, deleteItem}) => {
 
