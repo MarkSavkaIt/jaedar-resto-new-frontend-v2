@@ -7,11 +7,9 @@ const Home = () => {
 	const [localStorageItems, setLocalStorageItems] = useState(JSON.parse(localStorage.getItem("orderList")) || [])
 
 	const addItemToStorage = () => { 
-		console.log("add item ()")
 		setLocalStorageItems(JSON.parse(localStorage.getItem('orderList')))
 	}
 	const deleteItem = (id) => {
-		console.log("delete item ()")
 		const temp = []
 		localStorageItems.map(item => {
 			if (item.id !== id) temp.push(item)
@@ -20,7 +18,6 @@ const Home = () => {
 		setLocalStorageItems(temp)
 	}
 
-	useEffect(() => console.log(localStorageItems), [localStorageItems])
 
 	return (
 		<div className="home">
