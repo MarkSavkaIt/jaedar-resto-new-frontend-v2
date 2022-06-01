@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import MenuFilter from "./MenuFilter";
 import MenuGrid from "./MenuGrid";
 
-const Menu = ({ addItemToStorage }) => {
+const Menu = ({ addItemToStorage, search }) => {
 	const [category, setCategory] = useState("hot");
 	const [fade, setFade] = useState("");
 
@@ -18,7 +18,7 @@ const Menu = ({ addItemToStorage }) => {
 	return (
 		<div className="menu">
 			<MenuFilter changeCategory={changeCategory} />
-			<MenuGrid addItemToStorage={addItemToStorage} category={category} fade={fade} changeFade={changeFade} />
+			<MenuGrid search={search} addItemToStorage={addItemToStorage} category={category} fade={fade} changeFade={changeFade} />
 		</div>
 	);
 };

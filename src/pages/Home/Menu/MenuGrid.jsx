@@ -3,7 +3,7 @@ import { ArrowSVG } from "../../../assets/svg";
 import MenuItem from "./MenuItem";
 import fetchMenuItems from "../../../services/fetchMenuItems";
 
-const MenuGrid = ({addItemToStorage, fade, category, changeFade }) => {
+const MenuGrid = ({addItemToStorage, fade, category, changeFade, search }) => {
 	const [items, setItems] = useState(undefined);
 	const style = "menu_grid_items";
 
@@ -30,16 +30,18 @@ const MenuGrid = ({addItemToStorage, fade, category, changeFade }) => {
 					items.map((item) => {
 						return item.category.map((categoryFilter) => {
 							if (categoryFilter === category) {
-								return (
-									<MenuItem
-										id={item.id}
-										name={item.name}
-										price={item.price}
-										count={item.count}
-										img={item.img}
-										addItemToStorage={addItemToStorage}
-									/>
-								);
+								if(item.name.toLowerCase().includes(search.toLowerCase())){
+									return (
+										<MenuItem
+											id={item.id}
+											name={item.name}
+											price={item.price}
+											count={item.count}
+											img={item.img}
+											addItemToStorage={addItemToStorage}
+										/>
+									);
+								}
 							}
 						});
 					})
