@@ -12,7 +12,7 @@ const MenuFilter = (props) => {
 						props.changeCategory("hot");
 					}}
 				>
-					Hot Dishes
+					Гарячі страви
 				</li>
 				<li
 					onClick={() => {
@@ -20,7 +20,7 @@ const MenuFilter = (props) => {
 						props.changeCategory("cold");
 					}}
 				>
-					Cold Dishes
+					Холодні страви
 				</li>
 				<li
 					onClick={() => {
@@ -28,7 +28,7 @@ const MenuFilter = (props) => {
 						props.changeCategory("soup");
 					}}
 				>
-					Soup
+					Супи
 				</li>
 				<li
 					onClick={() => {
@@ -36,7 +36,7 @@ const MenuFilter = (props) => {
 						props.changeCategory("grill");
 					}}
 				>
-					Grill
+					Гриль
 				</li>
 				<li
 					onClick={() => {
@@ -44,7 +44,7 @@ const MenuFilter = (props) => {
 						props.changeCategory("appetizer");
 					}}
 				>
-					Appetizer
+					Закуски
 				</li>
 				<li
 					onClick={() => {
@@ -52,7 +52,7 @@ const MenuFilter = (props) => {
 						props.changeCategory("dessert");
 					}}
 				>
-					Dessert
+					Десерти
 				</li>
 			</ul>
 			<div className="status_line_parent">

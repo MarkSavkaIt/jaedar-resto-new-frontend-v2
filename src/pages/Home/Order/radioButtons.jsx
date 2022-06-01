@@ -35,9 +35,9 @@ const RadioButtons = () => {
 
     return(
         <div className="radio">
-            <div className={ setActiveClass( activeRadio["dine in"] )}  onClick={() => {setActiveRadioState('dine in')}} >Dine in</div>
-            <div className={ setActiveClass( activeRadio["to go"] )}    onClick={() => {setActiveRadioState('to go')}} >To Go</div>
-            <div className={ setActiveClass( activeRadio["delivery"] )} onClick={() => {setActiveRadioState('delivery')}} >Delivery</div>
+            <div className={ setActiveClass( activeRadio["dine in"] )}  onClick={() => {setActiveRadioState('dine in')}} >На місці</div>
+            <div className={ setActiveClass( activeRadio["to go"] )}    onClick={() => {setActiveRadioState('to go')}} >З собою</div>
+            <div className={ setActiveClass( activeRadio["delivery"] )} onClick={() => {setActiveRadioState('delivery')}} >Доставка</div>
         </div>
     )
 }

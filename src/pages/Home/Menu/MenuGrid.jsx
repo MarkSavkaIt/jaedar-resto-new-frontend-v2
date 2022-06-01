@@ -20,10 +20,10 @@ const MenuGrid = ({addItemToStorage, fade, category, changeFade }) => {
 		<div className="menu_grid">
 			<div className="menu_top">
 				<p>Choose Dishes</p>
-				<button>
+				{/* <button>
 					<ArrowSVG width="20px" height="10px" fill="white" />
 					Dine in
-				</button>
+				</button> */}
 			</div>
 			<div className={style + " " + fade}>
 				{items &&
@@ -42,7 +42,11 @@ const MenuGrid = ({addItemToStorage, fade, category, changeFade }) => {
 								);
 							}
 						});
-					})}
+					})
+				}
+			</div>
+			<div>
+				{!items && <p className="empty_menu">Наразі меню пусте</p>}
 			</div>
 		</div>
 	);
