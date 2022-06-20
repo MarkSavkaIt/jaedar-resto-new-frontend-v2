@@ -19,7 +19,7 @@ const MenuGrid = ({addItemToStorage, fade, category, changeFade, search }) => {
 	return (
 		<div className="menu_grid">
 			<div className="menu_top">
-				<p>Choose Dishes</p>
+				<p>Вибирайте страви</p>
 				{/* <button>
 					<ArrowSVG width="20px" height="10px" fill="white" />
 					Dine in

@@ -32,7 +32,7 @@ function App() {
 					<script src="https://scripts.sirv.com/sirv.js"></script>
 				</Helmet>
 				<div className="wrapper">
-					<nav className="sidebar-router">
+					{/* <nav className="sidebar-router">
 						<ul className="sidebar-router-logo">
 							<li>
 								<Link to="/">
@@ -113,7 +113,7 @@ function App() {
 								<SignOutSVG fill={colorSVG} />
 							</li>
 						</ul>
-					</nav>
+					</nav> */}
 					<Switch>
 						<Route exact path="/">
 							<Home />
