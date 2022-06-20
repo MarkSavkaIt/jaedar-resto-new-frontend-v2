@@ -6,7 +6,7 @@ const Header = ({handleSearch}) => {
 		<header>
 			<HeaderInfo label={"Jaedar Resto"} />
 			<div className="header-input-search">
-				<input type="text" onChange={handleSearch} placeholder={"Search for food, coffee, etc.."} />
+				<input type="text" onChange={handleSearch} placeholder={"Пошук страв, десертів, тощо..."} />
 			</div>
 		</header>
 	);

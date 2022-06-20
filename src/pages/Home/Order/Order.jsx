@@ -10,7 +10,7 @@ const Order = ({localStorageItems, deleteItem}) => {
 
    return (
       <div className="order">
-         <p>Order #342574</p>
+         <p>Замовлення #342574</p>
          <RadioButtons />
          {/* Order items */}
          {

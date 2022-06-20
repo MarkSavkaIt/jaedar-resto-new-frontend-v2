@@ -7,6 +7,11 @@ const MenuGrid = ({addItemToStorage, fade, category, changeFade, search }) => {
 	const [items, setItems] = useState(undefined);
 	const style = "menu_grid_items";
 
+	if(items)
+	console.log('test111 : ', items.filter(item => 
+		item.category.includes(category)
+	).length);
+
 	useEffect(() => {
 		async function getItems() {
 			setItems(await fetchMenuItems());
@@ -46,6 +51,13 @@ const MenuGrid = ({addItemToStorage, fade, category, changeFade, search }) => {
 						});
 					})
 				}
+				{items && items.filter(item => 
+					item.category.includes(category)
+				).length === 0
+					? <p>Ця категорія не містить страв</p>
+					: items.filter(item => 
+						item.name.toLowerCase().includes(search.toLowerCase())
+					).length === 0 && <p>Ваш пошук не дав результатів<br/></p>}
 			</div>
 			<div>
 				{!items && <p className="empty_menu">Наразі меню пусте</p>}

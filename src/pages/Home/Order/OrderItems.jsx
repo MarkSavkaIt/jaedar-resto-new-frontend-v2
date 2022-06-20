@@ -32,7 +32,7 @@ const OrderItems = ({ img, name, price, deleteItem, id }) => {
 			<input
 				className="comment"
 				type="text"
-				placeholder="U can add a comment"
+				placeholder="Ви можете додати коментар"
 			/>
 			<div className="delete" onClick={() => deleteItem(id)} >
 				<DeleteSVG />
