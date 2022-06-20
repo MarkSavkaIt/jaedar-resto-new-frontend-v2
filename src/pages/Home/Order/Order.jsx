@@ -18,6 +18,7 @@ const Order = ({localStorageItems, deleteItem}) => {
                return <OrderItems deleteItem={deleteItem} img={item.img} name={item.name} price={item.price} key={item.id} id={item.id} />
             })
          }
+         <button className='order_button'>Замовити</button>
       </div>
    )
 }
