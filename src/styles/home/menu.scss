@@ -105,7 +105,7 @@
    }
 
    .menu_grid {
-      height: calc(100vh - (var(--header-height) + var(--page-padding) + var(--menu-list-height) + var(--header-margin-bottom)));
+      // height: calc(100vh - (var(--header-height) + var(--page-padding) + var(--menu-list-height) + var(--header-margin-bottom)));
       overflow: scroll
    }
 
